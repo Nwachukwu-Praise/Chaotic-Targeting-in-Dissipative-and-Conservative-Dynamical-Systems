@@ -1,0 +1,189 @@
+% ============================================================================
+%  ECR methodology - middle-weight version: the five relations you would want
+%  to cite are displayed and numbered, everything else runs inline.
+%  Follows on from \section{ECR Data-Driven Targeting}\label{sec:ecr-method}.
+%  Requires amsmath, amssymb, bm.
+%
+%  Other variants in this folder:
+%    ecr_method_math_2p.tex    two pages, every relation displayed (13 eqs)
+%    ecr_method_math_full.tex  six pages, adds the target geometry, the
+%                              training algorithm and the remarks on delay
+%                              coordinates and deterministic deadlock
+%
+%  NOTATION: the observed (controller) state is bold, \mathbf{z}_n; plain
+%  x, y, z are the Lorenz coordinates.  Rename to \bm{\zeta}_n if the clash
+%  with the Lorenz z is unwelcome.
+% ============================================================================
+
+\subsection{Plant, section and admissible perturbations}
+\label{subsec:ecr-plant}
+
+The Lorenz system is written in full, since the second equation is what defines
+the surface of section used throughout,
+%
+\begin{equation}
+\dot{x}=\sigma\,(y-x),
+\qquad
+\dot{y}=\rho\,x-y-xz,
+\qquad
+\dot{z}=xy-\beta z,
+\label{eq:lorenz}
+\end{equation}
+%
+with state $\mathbf{u}=[x\;y\;z]^{\mathsf T}$, flow
+$\varphi_t(\mathbf{u};\mathbf{p})$ and control parameters
+$\mathbf{p}=[\sigma\;\rho\;\beta]^{\mathsf T}\in\mathbb{R}^{r}$, $r=3$. The
+section is the half-plane
+$\Sigma=\{\mathbf{u}:y=y_{\mathrm{PSS}},\,\dot y<0\}$ with
+$y_{\mathrm{PSS}}=\sqrt{\beta_{\mathrm{nom}}(\rho_{\mathrm{nom}}-1)}=8.4853$;
+transversality requires $\dot y|_{\Sigma}\neq0$ by \eqref{eq:lorenz}, and the
+sign condition selects the branch that excludes the equilibrium $C^{+}$. With
+the first return time
+$\tau=\min\{t>0:\varphi_t(\mathbf{u};\mathbf{p})\in\Sigma\}$ and
+$y\equiv y_{\mathrm{PSS}}$ on $\Sigma$, the observed state at the $n$-th
+crossing is $\mathbf{z}_n=[x(t_n)\;z(t_n)]^{\mathsf T}\in\mathbb{R}^{N}$,
+$N=2$, and the dynamics reduce to the discrete map
+%
+\begin{equation}
+\mathbf{z}_{n+1}=\mathbf{G}(\mathbf{z}_n,\mathbf{p}_n),
+\label{eq:map}
+\end{equation}
+%
+the parameter being held constant between crossings. Where only a scalar
+measurement $s(t)$ is available,
+the delay vector $[s(t_n)\;s(t_n-T)\;\cdots]^{\mathsf T}$ replaces the section
+state and \eqref{eq:map} still holds generically.
+
+Each parameter is confined to
+$\Pi=\{\mathbf{p}:|p^{i}-p^{i}_{\mathrm{nom}}|<\delta p^{i}_{\max},\,i=1,\dots,r\}$,
+here $\mathbf{p}_{\mathrm{nom}}=[10\;28\;8/3]^{\mathsf T}$ and
+$\delta\mathbf{p}_{\max}=[0.30\;0.84\;0.08]^{\mathsf T}$, i.e.\ $3\%$ of each
+nominal value. That budget is a design choice carried over from the source
+paper, not a property of the method: $\Pi$ need only be small enough to leave
+the attractor intact, and both the extent of the control regions and the
+reaching time scale with how large it is. With the normalised perturbation
+$\Delta\mathbf{p}_n=(\mathbf{p}_n-\mathbf{p}_{\mathrm{nom}})\oslash\delta\mathbf{p}_{\max}$,
+admissibility is the box test $\|\Delta\mathbf{p}_n\|_{\infty}\le1$. The target
+is a fixed point of the controlled map at nominal parameters,
+$\mathbf{z}^{*}=\mathbf{G}(\mathbf{z}^{*},\mathbf{p}_{\mathrm{nom}})$ --- a
+period-1 unstable periodic orbit of the flow --- located by Newton iteration on
+$\mathbf{G}(\mathbf{z},\mathbf{p}_{\mathrm{nom}})-\mathbf{z}$ with a
+numerically differentiated Jacobian:
+$\mathbf{z}^{*}=[14.2522\;\,39.7867]^{\mathsf T}$, with map eigenvalues
+$\lambda_1=4.71$ and $\lambda_2\approx10^{-9}$, so the return map is
+effectively one-dimensional. The displacement reachable within $\Pi$ exceeds
+the target radius $\delta=0.30$ tenfold, which makes single-step targeting
+feasible.
+
+\subsection{Control regions and their empirical construction}
+\label{subsec:ecr-regions}
+
+With $\mathcal{B}_\delta=\{\mathbf{z}:\|\mathbf{z}-\mathbf{z}^{*}\|<\delta\}$,
+the target region and the extended control regions are
+%
+\begin{align}
+T_0&=\Bigl\{\mathbf{z}\in\mathcal{B}_\delta:\exists\,\mathbf{p}\in\Pi,\;
+\mathbf{G}(\mathbf{z},\mathbf{p})\in\mathcal{B}_\delta\Bigr\},
+\label{eq:def-T0}\\[2pt]
+T_i&=\Bigl\{\mathbf{z}\notin\textstyle\bigcup_{j<i}T_j:\exists\,\mathbf{p}\in\Pi,\;
+\mathbf{G}(\mathbf{z},\mathbf{p})\in T_{i-1}\Bigr\},
+\qquad i=1,\dots,K .
+\label{eq:def-Ti}
+\end{align}
+%
+The regions are disjoint by construction, membership of $T_i$ certifies capture
+of $T_0$ within $i$ admissible steps, and their union is the activation region,
+outside which $\mathbf{p}_{\mathrm{nom}}$ is applied. Both are existence
+statements, settled empirically: the plant is run from many initial conditions
+with an independent $\mathbf{p}_n\sim\mathcal{U}(\Pi)$ applied at each
+crossing, giving the transitions
+$\mathcal{D}=\{(\mathbf{z}_n,\mathbf{p}_n,\mathbf{z}_{n+1})\}_{n=1}^{M}$ in
+which the applied $\mathbf{p}_n$ is the witness. Level zero follows directly
+from \eqref{eq:def-T0} as
+$\mathcal{I}_0=\{n:\|\mathbf{z}_n-\mathbf{z}^{*}\|<\delta\wedge
+\|\mathbf{z}_{n+1}-\mathbf{z}^{*}\|<\delta\}$, and for $i\ge1$
+$\mathcal{I}_i=\{n:\mathcal{M}_{i-1}(\mathbf{z}_{n+1})=1\wedge
+\mathcal{M}_{j}(\mathbf{z}_{n})=0\;\forall j<i\}$, membership of the successor
+in $T_{i-1}$ being decided by the already-trained level-$(i-1)$ model acting as
+an oracle $\mathcal{M}_{i-1}:\mathbb{R}^{N}\to\{0,1\}$, defined below. Region
+$i$ is thus trained on
+$\{(\mathbf{z}_n,\Delta\mathbf{p}_n)\}_{n\in\mathcal{I}_i}$ --- the state, and
+the perturbation observed to move it one region inward --- bottom-up, each
+level supplying the oracle for the next.
+
+\subsection{Clustering, region assignment and local models}
+\label{subsec:ecr-clustering}
+
+ECR-I fits one network over the whole activation region and ECR-II one per
+region; ECR-III partitions each region first, since data in the outer regions
+is scattered. On $\mathcal{Z}_i=\{\mathbf{z}_n\}_{n\in\mathcal{I}_i}$ the clusters
+$C_{ij}$ are the equivalence classes of the transitive closure of
+$\mathbf{z}\sim\mathbf{z}'\iff\|\mathbf{z}-\mathbf{z}'\|\le r_i$, with $r_i$
+taken at the first minimum of the histogram of pairwise distances. Each cluster
+carries a mean $\bm{\mu}_{ij}$ and a ridge-regularised covariance
+$\bm{\Sigma}_{ij}$, and a state is assigned to the cluster minimising the
+normalised Mahalanobis distance
+%
+\begin{equation}
+\mathrm{NMD}^{2}_{ij}(\mathbf{z}_n)=(\mathbf{z}_n-\bm{\mu}_{ij})^{\mathsf T}\,
+\underline{\mathbf{N}}_{ij}\,(\mathbf{z}_n-\bm{\mu}_{ij}),
+\qquad
+\underline{\mathbf{N}}_{ij}=\Bigl(\bm{\Sigma}_{ij}\big/\det(\bm{\Sigma}_{ij})^{1/N}\Bigr)^{-1},
+\label{eq:nmd}
+\end{equation}
+%
+the unit-determinant normalisation removing the size of a cluster but not its
+shape, so clusters of different populations compete on equal terms (plain,
+variance- and trace-normalised readings are alternatives). Each cluster
+also carries a Gaussian RBF network mapping the standardised state
+$\tilde{\mathbf{z}}$ to a normalised perturbation,
+$\widehat{\Delta\mathbf{p}}(\mathbf{z})=\mathbf{W}^{\mathsf T}[\phi_1\;\cdots\;\phi_{n_c}\;1]^{\mathsf T}$
+with $\phi_k=\exp(-\|\tilde{\mathbf{z}}-\mathbf{c}_k\|^{2}/2s_k^{2})$, centres
+from $k$-means and weights
+$\mathbf{W}=(\bm{\Phi}^{\mathsf T}\bm{\Phi}+\lambda\mathbf{I})^{-1}\bm{\Phi}^{\mathsf T}\mathbf{Y}$
+in closed form. The oracle used above is an admissibility test on the nearest
+cluster's network,
+$\mathcal{M}_i(\mathbf{z})=\mathbb{1}[\|\widehat{\Delta\mathbf{p}}^{\,(ij^{*})}(\mathbf{z})\|_{\infty}\le1]$
+with $j^{*}=\arg\min_j\mathrm{NMD}_{ij}(\mathbf{z})$, optionally gated on the
+cluster's own training NMD, since \eqref{eq:nmd} returns a nearest cluster even
+for states far outside the data.
+
+\subsection{Control law and performance measures}
+\label{subsec:ecr-online}
+
+At each crossing the state is measured, a region is identified and the
+corresponding perturbation applied,
+%
+\begin{equation}
+\mathbf{p}_n=
+\begin{cases}
+\mathbf{p}_{\mathrm{nom}}+\widehat{\Delta\mathbf{p}}^{\,(i^{*}j^{*})}(\mathbf{z}_n)\odot\delta\mathbf{p}_{\max},
+& \text{if an admissible } (i^{*},j^{*}) \text{ exists},\\
+\mathbf{p}_{\mathrm{nom}}, & \text{otherwise},
+\end{cases}
+\label{eq:control-law}
+\end{equation}
+%
+so the applied perturbation is admissible by construction. The variants differ
+only in how the pair is found: ECR-II takes the first admissible answer in
+ascending region order,
+$i^{*}=\min\{i:\|\widehat{\Delta\mathbf{p}}^{\,(i)}(\mathbf{z}_n)\|_{\infty}\le1\}$,
+whereas ECR-III obtains it analytically as
+$(i^{*},j^{*})=\arg\min_{i,j}\mathrm{NMD}_{ij}(\mathbf{z}_n)$ over the clusters
+of all regions at once, trading a sequential search over networks for a
+distance computation. Performance is measured by the reaching time and its mean
+over initial conditions on the attractor,
+%
+\begin{equation}
+n_r(\mathbf{z}_0)=\min\bigl\{n\ge0:\|\mathbf{z}_n-\mathbf{z}^{*}\|<\delta\bigr\},
+\qquad
+\bar{n}_r=\frac{1}{M_{\mathrm{ic}}}\sum_{m=1}^{M_{\mathrm{ic}}}
+\min\bigl\{n_r(\mathbf{z}_0^{(m)}),n_{\max}\bigr\},
+\label{eq:reaching-time}
+\end{equation}
+%
+censored at a horizon $n_{\max}$, together with the capture rate
+$\Pr\{n_r<n_{\max}\}$ and the retention --- the fraction of steps after capture
+spent inside $\mathcal{B}_\delta$ --- which separates targeting from
+stabilisation. Without targeting $\bar{n}_r$ is the natural recurrence time to
+$\mathcal{B}_\delta$, some $15$ steps here.
