@@ -1,0 +1,216 @@
+===============================================================
+Shinbrot chapter 4 diagnostics
+date           : 2026-08-13 03:23:40
+MATLAB version : 26.1.0.3276743 (R2026a) Update 3
+folder         : C:\Users\npcoz\OneDrive - Imperial College London\Project\Codes\Shinbrot targeting
+===============================================================
+
+Generating the nominal return map (1200 crossings)...
+  done in 20.8 s, 1200 crossings
+source index 150, X_s = 12.806689
+
+
+############ PART: nominal return map ############
+
+=== Nominal return-map diagnostics ===
+crossings used (transient 100 discarded) : 1099 pairs
+
+(a) mean logarithmic slope, equation (27)
+  adjacent pairs considered            : 1098
+  retained as same-branch              : 1003
+  rejected as branch jumps             : 95
+  <ln|F'|>                             : 1.5091
+  median / std                         : 1.5308 / 1.1998
+  without branch rejection             : 1.6712  (sensitivity check)
+  implied slope s = -ln10/lambda       : -1.5258
+  published s                          : -2.49 +- 0.09
+  published s implies lambda in        : [0.892, 0.959]
+
+(b) one-dimensionality of the return map, subsection 3.1.2
+  windows accepted                     : 30 of 40
+  RMS residual in X_{n+1}              : 0.4878
+  max residual                         : 5.399
+  target half-width eps_t              : 0.008
+  RMS residual / eps_t                 : 60.98
+  max residual / eps_t                 : 674.9
+  The residual spread is comparable to or larger than the
+  target half-width.  The scalar reduction is then a real source
+  of error in the targeting calculation and should be reported
+  as such rather than assumed away.
+======================================
+
+
+############ PART: search resolution ############
+declared resolution, equation (12)
+  admissible interval width 2*dp   : 0.2
+  minCertifiedDepth d              : 8
+  dp_res = 2*dp / 2^d              : 0.00078125
+  reported by the search           : 0.00078125
+  lambda used                      : 1.5091  (measured <ln|F'|> from the nominal map)
+  feature width ~ 2*dp*exp(-lambda n) falls below dp_res at n = 3.67
+  Beyond that horizon the search is in its adaptive-descent
+  phase: credible at the declared resolution, not certified.
+
+principal demonstration, discontinuity awareness
+  found                            : 1
+  selected p                       : 0.019335938
+  horizon                          : 3
+  discontinuities detected         : 30
+  discontinuity reductions         : 29
+  continuous intervals examined    : 4583
+  crossing signature evaluations   : 2329
+  continuous intervals subdivided  : 2286
+  resolution floor reached         : 0
+  interval budget exhausted        : 1
+
+  A nonzero discontinuity count is the evidence that the
+  discontinuity awareness did work.  A zero count on this source
+  would mean the distinguishing feature of the implementation was
+  never exercised in the principal demonstration, which is worth
+  knowing either way.
+
+
+############ PART: replay verification ############
+
+=== Replay independence and negative control ===
+source X_s = 12.806689,  eps_t = 0.008
+
+shinbrotDiscontinuityAwareBisection
+  selected p                     : 0.0193359375
+  horizon                        : 3
+  search-reported error          : 0.0019826363929
+  replay-measured error          : 0.00198263639304
+  divergence                     : 1.38556e-13
+  baseline replay hit            : 1
+  independence                   : divergent, replay re-integrates
+  corrupt p by +0.001            : replay hit = 0, error = 0.0627664 -> rejected as required
+  corrupt p by +0.005            : replay hit = 0, error = 0.315355 -> rejected as required
+  corrupt horizon +1            : replay hit = 0, error = 0.0403483 -> rejected as required
+  corrupt horizon -1            : replay hit = 0, error = 1.55942 -> rejected as required
+
+hybridGridBisection
+  selected p                     : 0.019375
+  horizon                        : 3
+  search-reported error          : 0.000563046852456
+  replay-measured error          : 0.000563046852456
+  divergence                     : 0
+  baseline replay hit            : 1
+  independence                   : ZERO divergence.  The search
+                                   error and the replay error come
+                                   from the same propagation, so the
+                                   agreement is guaranteed and is not
+                                   evidence of correctness.
+  corrupt p by +0.001            : replay hit = 0, error = 0.065279 -> rejected as required
+  corrupt p by +0.005            : replay hit = 0, error = 0.317788 -> rejected as required
+  corrupt horizon +1            : replay hit = 0, error = 0.0521999 -> rejected as required
+  corrupt horizon -1            : replay hit = 0, error = 1.55926 -> rejected as required
+
+--- summary ---
+                   <strong>method</strong>                            <strong>case</strong>            <strong>corruption</strong>    <strong>replayedP</strong>    <strong>replayedHorizon</strong>    <strong>replayTargetError</strong>    <strong>replayHit</strong>    <strong>expectedOutcomeObserved</strong>    <strong>searchReplayDivergence</strong>    <strong>searchIsIndependent</strong>
+    <strong>_____________________________________</strong>    <strong>____________________</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>_______________</strong>    <strong>_________________</strong>    <strong>_________</strong>    <strong>_______________________</strong>    <strong>______________________</strong>    <strong>___________________</strong>
+
+    "shinbrotDiscontinuityAwareBisection"    "baseline"                  NaN       0.019336            3               0.0019826          true                true                    1.3856e-13                 true        
+    "shinbrotDiscontinuityAwareBisection"    "corruptedParameter"      0.001       0.020336            3                0.062766          false               true                           NaN                 true        
+    "shinbrotDiscontinuityAwareBisection"    "corruptedParameter"      0.005       0.024336            3                 0.31535          false               true                           NaN                 true        
+    "shinbrotDiscontinuityAwareBisection"    "corruptedHorizon"            1       0.019336            4                0.040348          false               true                           NaN                 true        
+    "shinbrotDiscontinuityAwareBisection"    "corruptedHorizon"           -1       0.019336            2                  1.5594          false               true                           NaN                 true        
+    "hybridGridBisection"                    "baseline"                  NaN       0.019375            3              0.00056305          true                true                             0                 false       
+    "hybridGridBisection"                    "corruptedParameter"      0.001       0.020375            3                0.065279          false               true                           NaN                 false       
+    "hybridGridBisection"                    "corruptedParameter"      0.005       0.024375            3                 0.31779          false               true                           NaN                 false       
+    "hybridGridBisection"                    "corruptedHorizon"            1       0.019375            4                  0.0522          false               true                           NaN                 false       
+    "hybridGridBisection"                    "corruptedHorizon"           -1       0.019375            2                  1.5593          false               true                           NaN                 false       
+
+baseline replays passed            : 1
+corrupted replays rejected         : 8 of 8
+methods with independent replay    : 1 of 2
+
+Both negative controls behaved as required: the replay rejects
+a corrupted perturbation and a corrupted horizon.  Note separately
+that a zero search-replay divergence still means the reported error
+was not independently recomputed for that method.
+================================================
+
+
+############ PART: noise calibration ############
+
+=== Shinbrot noise calibration (equations 23 and 24) ===
+nominal map, transient discarded : 100 crossings
+inter-crossing intervals used    : 1099
+mean return time  Tbar           : 1.51859
+  median / std                   : 0.861324 / 1.28165
+  min / max                      : 0.632056 / 11.2082
+integration step  dt             : 0.001
+noise draws per crossing  N      : 1518.59   (sqrt(N) = 38.97)
+target half-width eps_t          : 0.008
+threshold  sigma_* = eps_t/sqrtN : 0.0002053
+sigma giving the published kT=1  : 0.02566   (delta = 0.572)
+
+per-level conversion
+    <strong>sigmaNoise</strong>     <strong>delta</strong>     <strong>sigmaOverSigmaStar</strong>    <strong>perCrossingDisplacement</strong>    <strong>belowThreshold</strong>    <strong>deltaAtMostOne</strong>
+    <strong>__________</strong>    <strong>_______</strong>    <strong>__________________</strong>    <strong>_______________________</strong>    <strong>______________</strong>    <strong>______________</strong>
+
+          0             0               0                        0                true              true      
+       0.01        0.2229          48.711                  0.38969                false             true      
+       0.03       0.66871          146.13                   1.1691                false             true      
+       0.05        1.1145          243.56                   1.9485                false             false     
+      0.075        1.6718          365.34                   2.9227                false             false     
+        0.1         2.229          487.11                   3.8969                false             false     
+       0.15        3.3436          730.67                   5.8454                false             false     
+        0.2        4.4581          974.23                   7.7938                false             false     
+        0.3        6.6871          1461.3                   11.691                false             false     
+        0.5        11.145          2435.6                   19.485                false             false     
+          1         22.29          4871.1                   38.969                false             false     
+
+smallest non-zero level tested   : 0.01
+  as a multiple of sigma_*       : 48.71x
+levels at or below sigma_*       : 0 of 10
+levels with delta <= 1           : 2 of 10
+
+adaptive versus fixed-step discretisation (subsection 3.1.9)
+  adaptive deterministic error   : 0.00198264
+  fixed-step sigma = 0 error     : 0.00208517
+  absolute difference            : 0.000102532
+  ratio                          : 0.9508
+  as a fraction of eps_t         : 0.01282
+
+Reading: the sweep samples the descending branch of the noise response
+wherever sigma exceeds sigma_*, and lies off the published abscissa
+wherever delta exceeds one.  Neither is a property of the targeting method.
+=========================================================
+
+=== Extended noise summary (95% Wilson intervals) ===
+    <strong>sigmaNoise</strong>    <strong>trials</strong>    <strong>successes</strong>    <strong>successFraction</strong>    <strong>wilsonLow</strong>    <strong>wilsonHigh</strong>    <strong>meanSuccessfulCrossings</strong>    <strong>medianSuccessfulCrossings</strong>    <strong>meanFinalTargetError</strong>    <strong>stdFinalTargetError</strong>    <strong>meanRetargetingEvents</strong>    <strong>meanRetargetingFailures</strong>    <strong>retargetingFailureShare</strong>    <strong>meanRk4Steps</strong>    <strong>meanPhysicalTime</strong>    <strong>integrationFailures</strong>     <strong>delta</strong>     <strong>sigmaOverSigmaStar</strong>    <strong>aboveThreshold</strong>
+    <strong>__________</strong>    <strong>______</strong>    <strong>_________</strong>    <strong>_______________</strong>    <strong>_________</strong>    <strong>__________</strong>    <strong>_______________________</strong>    <strong>_________________________</strong>    <strong>____________________</strong>    <strong>___________________</strong>    <strong>_____________________</strong>    <strong>_______________________</strong>    <strong>_______________________</strong>    <strong>____________</strong>    <strong>________________</strong>    <strong>___________________</strong>    <strong>_______</strong>    <strong>__________________</strong>    <strong>______________</strong>
+
+          0         10         10                1           0.72247            1                  3                           3                    0.0020852              4.5714e-19                    3                         0                            0                6100             6.0986                  0                   0               0              false     
+       0.01         10          4              0.4           0.16818      0.68733               35.5                          42                      0.78185                  1.0098                 50.8                         0                            0               36489             22.541                  0              0.2229          48.711              true      
+       0.03         10          5              0.5           0.23659      0.76341                 19                          10                      0.57074                 0.77483                   40                         0                            0               38069             18.568                  0             0.66871          146.13              true      
+       0.05         10          1              0.1          0.017876      0.40415                 25                          25                      0.53977                 0.64819                 57.4                       0.9                     0.015679               55150              46.52                  0              1.1145          243.56              true      
+      0.075         10          3              0.3           0.10779      0.60322                  9                           5                       1.2199                  1.3221                 45.4                       2.9                     0.063877               44159             9.6702                  0              1.6718          365.34              true      
+        0.1         10          0                0                 0      0.27753                NaN                         NaN                       1.7983                  1.1477                   61                       2.8                     0.045902               60866                NaN                  0               2.229          487.11              true      
+       0.15         10          2              0.2          0.056682      0.50984               15.5                        15.5                       0.8191                 0.64638                 51.9                       3.7                     0.071291               57868             21.654                  0              3.3436          730.67              true      
+        0.2         10          1              0.1          0.017876      0.40415                 49                          49                        1.101                  1.0365                 59.8                       5.3                     0.088629               73541             50.418                  0              4.4581          974.23              true      
+        0.3         10          1              0.1          0.017876      0.40415                 35                          35                       1.7585                  1.5981                 58.4                       4.9                     0.083904               71532             31.368                  0              6.6871          1461.3              true      
+        0.5         10          1              0.1          0.017876      0.40415                 56                          56                       2.7801                   1.774                 60.5                       4.7                     0.077686               75727             44.152                  0              11.145          2435.6              true      
+          1         10          2              0.2          0.056682      0.50984               41.5                        41.5                        3.815                   4.343                 57.1                       2.3                      0.04028               65967             38.749                  0               22.29          4871.1              true      
+
+non-zero-noise trials              : 100
+non-zero-noise successes           : 20
+pooled non-zero success fraction   : 0.200  [0.133, 0.289]
+level pairs with overlapping CIs   : 45 of 45
+  Overlapping intervals are the quantitative form of the
+  caution already stated in Section 4.1.3: differences between
+  neighbouring success fractions are not resolved by ten trials.
+
+failure mechanism
+  retargetingFailureShare is the fraction of retargeting
+  events that returned no admissible perturbation.  A share near
+  zero attributes the trial failures to the noise defeating a
+  valid control; a large share attributes them to the search
+  itself finding nothing.
+=========================================================
+
+===============================================================
+saved: C:\Users\npcoz\OneDrive - Imperial College London\Project\Codes\Shinbrot targeting\shinbrot_chapter4_diagnostics.mat
+log  : C:\Users\npcoz\OneDrive - Imperial College London\Project\Codes\Shinbrot targeting\shinbrot_chapter4_diagnostics.log
+===============================================================
