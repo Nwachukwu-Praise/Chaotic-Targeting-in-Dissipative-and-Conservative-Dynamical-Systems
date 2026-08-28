@@ -1,0 +1,75 @@
+Schroer-Ott first-light targeting on S^1 x R
+k: 1.25
+control amplitude: 0.003
+maxPeriod: 5
+Orbit catalogue sorted by omega:
+        <strong>id</strong>         <strong>period</strong>    <strong>winding</strong>     <strong>omega</strong>      <strong>trace</strong>     <strong>residue</strong>     <strong>absResidue</strong>     <strong>residual</strong>        <strong>classification</strong>       <strong>samePMCount</strong>
+    <strong>___________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>____________________</strong>    <strong>___________</strong>
+
+    "chain-012"      5          1           0.2    -7.4731      2.3683      2.3683      3.2398e-16    "inverse-hyperbolic"         2     
+    "chain-011"      5          1           0.2     11.895     -2.4737      2.4737      1.2686e-14    "direct-hyperbolic"          2     
+    "chain-008"      4          1          0.25    -2.1342      1.0335      1.0335      2.7756e-17    "inverse-hyperbolic"         2     
+    "chain-007"      4          1          0.25     6.3029     -1.0757      1.0757      4.9651e-16    "direct-hyperbolic"          2     
+    "chain-003"      3          1       0.33333    -0.2285     0.55712     0.55712      1.1124e-14    "elliptic"                   2     
+    "chain-004"      3          1       0.33333      4.309    -0.57725     0.57725      2.2888e-16    "direct-hyperbolic"          2     
+    "chain-013"      5          2           0.4    -1.4683     0.86706     0.86706       1.831e-15    "elliptic"                   2     
+    "chain-014"      5          2           0.4     5.6869    -0.92172     0.92172      2.4825e-16    "direct-hyperbolic"          2     
+    "chain-001"      2          1           0.5     0.4375     0.39062     0.39062      4.2672e-14    "elliptic"                   2     
+    "chain-002"      2          1           0.5     3.6065    -0.40163     0.40163      1.5701e-16    "direct-hyperbolic"          2     
+    "chain-015"      5          3           0.6    -1.4683     0.86706     0.86706      2.2204e-16    "elliptic"                   2     
+    "chain-016"      5          3           0.6     5.6869    -0.92172     0.92172      5.2369e-16    "direct-hyperbolic"          2     
+    "chain-006"      3          2       0.66667    -0.2285     0.55712     0.55712      5.0197e-14    "elliptic"                   2     
+    "chain-005"      3          2       0.66667      4.309    -0.57725     0.57725      4.9651e-16    "direct-hyperbolic"          2     
+    "chain-009"      4          3          0.75    -2.1342      1.0335      1.0335      1.0474e-15    "inverse-hyperbolic"         2     
+    "chain-010"      4          3          0.75     6.3029     -1.0757      1.0757      9.1551e-16    "direct-hyperbolic"          2     
+    "chain-018"      5          4           0.8    -7.4731      2.3683      2.3683      1.7902e-15    "inverse-hyperbolic"         2     
+    "chain-017"      5          4           0.8     11.895     -2.4737      2.4737      6.4541e-14    "direct-hyperbolic"          2     
+
+Diagnostic Figure-3 fractions:
+     <strong>omega</strong>     <strong>represented</strong>    <strong>directHyperbolic</strong>
+    <strong>_______</strong>    <strong>___________</strong>    <strong>________________</strong>
+
+       0.25       true             true       
+    0.33333       true             true       
+        0.4       true             true       
+        0.5       true             true       
+        0.6       true             true       
+    0.66667       true             true       
+       0.75       true             true       
+
+route rotation numbers: [0.6 0.666667]
+
+First-light deterministic targeting summary
+target reached: 1
+final containment: 1
+source rectangle: x=[0.64, 0.69], y=[0.48, 0.52]
+selected target lift: 0
+transport direction: +1
+k: 1.25
+control amplitude: 0.003
+maxPeriod: 5
+route rotation numbers: [0.6 0.666667]
+skipped proxies: chain-016
+number of applied controls: 2
+executed map iterations: 9
+final state: [6.24859960872, 0.710216917181]
+maximum applied abs(control): 0.003
+maximum intersection residual: 1.48256433869e-10
+maximum propagation-consistency error: 0
+number of unresolved splits: 0
+all selected connections resolved: 1
+all transfer-time minima certified: 1
+runtime seconds: 22.667
+Executed controls:
+    <strong>stage</strong>       <strong>targetID</strong>        <strong>controlY</strong>      <strong>executedIterations</strong>    <strong>cumulativeIterations</strong>    <strong>stateX</strong>    <strong>stateY</strong>     <strong>propagationConsistencyError</strong>
+    <strong>_____</strong>    <strong>______________</strong>    <strong>___________</strong>    <strong>__________________</strong>    <strong>____________________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>___________________________</strong>
+
+      2      "chain-005"       -0.00026746            9                      9              6.2486    0.70722                 0             
+      3      "final-target"          0.003            0                      9              6.2486    0.71022                 0             
+
+Performance profile:
+    <strong>forwardFamilyBuilds</strong>    <strong>backwardFamilyBuilds</strong>    <strong>backwardFamilyCacheReuses</strong>    <strong>indexedCrossingQueries</strong>    <strong>exactSegmentTestsAfterSpatialFiltering</strong>    <strong>naiveComparisonsAvoided</strong>    <strong>jProbesPruned</strong>    <strong>runtimeByStage</strong>    <strong>peakCurvePointCount</strong>
+    <strong>___________________</strong>    <strong>____________________</strong>    <strong>_________________________</strong>    <strong>______________________</strong>    <strong>______________________________________</strong>    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>______________</strong>    <strong>___________________</strong>
+
+            10                      4                         12                         876                               128                            2.0009e+07                 0           {0×0 double}             823        
+

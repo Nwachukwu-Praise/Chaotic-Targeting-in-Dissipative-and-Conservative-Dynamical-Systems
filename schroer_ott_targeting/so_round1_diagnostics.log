@@ -1,0 +1,243 @@
+===============================================================
+Schroer-Ott targeting - correction round 1 diagnostics
+date            : 2026-08-12 22:37:02
+MATLAB version  : 26.1.0.3276743 (R2026a) Update 3
+folder          : C:\Users\npcoz\OneDrive - Imperial College London\Project\Codes\schroer_ott_targeting
+Mapping Toolbox : 1
+===============================================================
+
+
+############ PART A: so_build_curve equivalence ############
+
+=== so_build_curve equivalence ===
+        <strong>component</strong>        <strong>direction</strong>    <strong>iterateCount</strong>    <strong>parametersIdentical</strong>    <strong>pointsIdentical</strong>    <strong>statusIdentical</strong>    <strong>depthIdentical</strong>    <strong>gapIdentical</strong>    <strong>midIdentical</strong>    <strong>maxParameterDifference</strong>    <strong>maxPointDifference</strong>    <strong>pointCount</strong>    <strong>referenceSeconds</strong>    <strong>optimisedSeconds</strong>    <strong>speedup</strong>    <strong>curvePointEvaluations</strong>    <strong>cacheHits</strong>
+    <strong>_________________</strong>    <strong>_________</strong>    <strong>____________</strong>    <strong>___________________</strong>    <strong>_______________</strong>    <strong>_______________</strong>    <strong>______________</strong>    <strong>____________</strong>    <strong>____________</strong>    <strong>______________________</strong>    <strong>__________________</strong>    <strong>__________</strong>    <strong>________________</strong>    <strong>________________</strong>    <strong>_______</strong>    <strong>_____________________</strong>    <strong>_________</strong>
+
+    "control-segment"        1             0                 true                 true               true              true             true            true                   0                       0                 17              0.0353            0.053377        0.66134              33                 65   
+    "control-segment"        1             1                 true                 true               true              true             true            true                   0                       0                 17           0.0058468            0.017813        0.32822              33                 65   
+    "control-segment"        1             3                 true                 true               true              true             true            true                   0                       0                 64           0.0093351            0.014866        0.62796             127                397   
+    "control-segment"        1             5                 true                 true               true              true             true            true                   0                       0                227            0.010286           0.0082926         1.2404             453               1625   
+    "control-segment"        1             6                 true                 true               true              true             true            true                   0                       0                173            0.017574           0.0078832         2.2293             345               1409   
+    "control-segment"       -1             0                 true                 true               true              true             true            true                   0                       0                 17           0.0005489           0.0006258        0.87712              33                 65   
+    "control-segment"       -1             1                 true                 true               true              true             true            true                   0                       0                 33            0.005916           0.0006384         9.2669              65                177   
+    "control-segment"       -1             3                 true                 true               true              true             true            true                   0                       0                 65           0.0023909           0.0007072         3.3808             129                401   
+    "control-segment"       -1             5                 true                 true               true              true             true            true                   0                       0                257           0.0092157           0.0014159         6.5087             513               1745   
+    "control-segment"       -1             6                 true                 true               true              true             true            true                   0                       0                319            0.016882            0.002124         7.9481             637               2701   
+    "proxy-circle"           1             0                 true                 true               true              true             true            true                   0                       0                 64           0.0078232           0.0013974         5.5984             129                256   
+    "proxy-circle"           1             1                 true                 true               true              true             true            true                   0                       0                 64           0.0013668           0.0005269          2.594             129                256   
+    "proxy-circle"           1             3                 true                 true               true              true             true            true                   0                       0                165            0.011605           0.0035801         3.2417             331               1182   
+    "proxy-circle"           1             5                 true                 true               true              true             true            true                   0                       0                377            0.020702           0.0054254         3.8158             755               3497   
+    "proxy-circle"           1             6                 true                 true               true              true             true            true                   0                       0                443            0.030063           0.0030411         9.8857             887               4682   
+    "proxy-circle"          -1             0                 true                 true               true              true             true            true                   0                       0                 64           0.0011991           0.0004919         2.4377             129                256   
+    "proxy-circle"          -1             1                 true                 true               true              true             true            true                   0                       0                 64           0.0011856           0.0004588         2.5841             129                256   
+    "proxy-circle"          -1             3                 true                 true               true              true             true            true                   0                       0                166            0.010957           0.0016452         6.6599             333               1192   
+    "proxy-circle"          -1             5                 true                 true               true              true             true            true                   0                       0                358            0.020101           0.0022204         9.0531             717               3385   
+    "proxy-circle"          -1             6                 true                 true               true              true             true            true                   0                       0                413            0.025382           0.0028325          8.961             827               4511   
+    "final-rectangle"        1             0                 true                 true               true              true             true            true                   0                       0                 64            0.014655           0.0007636         19.191             129                256   
+    "final-rectangle"        1             1                 true                 true               true              true             true            true                   0                       0                 64           0.0020487           0.0004651         4.4049             129                256   
+    "final-rectangle"        1             3                 true                 true               true              true             true            true                   0                       0                160           0.0097671           0.0018679         5.2289             321               1120   
+    "final-rectangle"        1             5                 true                 true               true              true             true            true                   0                       0                236            0.018524           0.0016275         11.382             473               1934   
+    "final-rectangle"        1             6                 true                 true               true              true             true            true                   0                       0                384             0.02902           0.0020899         13.886             769               3357   
+    "final-rectangle"       -1             0                 true                 true               true              true             true            true                   0                       0                 64           0.0016589           0.0005124         3.2375             129                256   
+    "final-rectangle"       -1             1                 true                 true               true              true             true            true                   0                       0                 96            0.004113           0.0006659         6.1766             193                576   
+    "final-rectangle"       -1             3                 true                 true               true              true             true            true                   0                       0                252            0.020279           0.0026417         7.6766             505               2247   
+    "final-rectangle"       -1             5                 true                 true               true              true             true            true                   0                       0                488            0.042979           0.0032333         13.292             977               4220   
+    "final-rectangle"       -1             6                 true                 true               true              true             true            true                   0                       0                485            0.062312           0.0042815         14.554             971               5429   
+
+cases                 : 30
+all identical         : 1
+max parameter diff    : 0.000e+00
+max point diff        : 0.000e+00
+total reference time  : 0.449 s
+total optimised time  : 0.148 s
+aggregate speedup     : 3.0x
+PART A: PASSED
+
+
+############ PART B: monodromy spectrum ############
+
+Hyperbolic chains and their monodromy spectrum:
+      <strong>ChainID</strong>      <strong>Period</strong>    <strong>Winding</strong>    <strong>RotationNumber</strong>       <strong>Classification</strong>        <strong>Trace</strong>     <strong>StableEigenvalue</strong>    <strong>UnstableEigenvalue</strong>    <strong>AbsStableEigenvalue</strong>    <strong>AbsUnstableEigenvalue</strong>    <strong>LyapunovExponentPerIterate</strong>
+    <strong>___________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______________</strong>    <strong>____________________</strong>    <strong>_______</strong>    <strong>________________</strong>    <strong>__________________</strong>    <strong>___________________</strong>    <strong>_____________________</strong>    <strong>__________________________</strong>
+
+    "chain-011"      5          1              0.2        "direct-hyperbolic"      11.895        0.084673               11.81               0.084673                  11.81                      0.49379         
+    "chain-012"      5          1              0.2        "inverse-hyperbolic"    -7.4731         -0.1363             -7.3368                 0.1363                 7.3368                      0.39858         
+    "chain-007"      4          1             0.25        "direct-hyperbolic"      6.3029         0.16287                6.14                0.16287                   6.14                      0.45371         
+    "chain-008"      4          1             0.25        "inverse-hyperbolic"    -2.1342        -0.69471             -1.4394                0.69471                 1.4394                     0.091064         
+    "chain-004"      3          1          0.33333        "direct-hyperbolic"       4.309         0.24613              4.0628                0.24613                 4.0628                      0.46729         
+    "chain-014"      5          2              0.4        "direct-hyperbolic"      5.6869         0.18165              5.5052                0.18165                 5.5052                      0.34114         
+    "chain-002"      2          1              0.5        "direct-hyperbolic"      3.6065         0.30268              3.3038                0.30268                 3.3038                      0.59754         
+    "chain-016"      5          3              0.6        "direct-hyperbolic"      5.6869         0.18165              5.5052                0.18165                 5.5052                      0.34114         
+    "chain-005"      3          2          0.66667        "direct-hyperbolic"       4.309         0.24613              4.0628                0.24613                 4.0628                      0.46729         
+    "chain-009"      4          3             0.75        "inverse-hyperbolic"    -2.1342        -0.69471             -1.4394                0.69471                 1.4394                     0.091064         
+    "chain-010"      4          3             0.75        "direct-hyperbolic"      6.3029         0.16287                6.14                0.16287                   6.14                      0.45371         
+    "chain-017"      5          4              0.8        "direct-hyperbolic"      11.895        0.084673               11.81               0.084673                  11.81                      0.49379         
+    "chain-018"      5          4              0.8        "inverse-hyperbolic"    -7.4731         -0.1363             -7.3368                 0.1363                 7.3368                      0.39858         
+
+
+spectrum consistency over the whole catalogue
+  chains                                : 18
+  max |det M - 1| (all phase points)    : 1.832e-13
+  max |trace M_j - trace M_1|           : 1.524e-11
+  max |lambda_s * lambda_u - 1|         : 5.995e-15
+  max eigenvector residual             : 1.447e-11
+  max |mean(y) - m/p| over catalogue    : 1.882e-14
+eigendirection figure drawn (handle 1)
+PART B: PASSED
+
+
+############ PART C: paper-trial timing ############
+
+================ paper-trial profile ================
+trial              : 1
+source state       : [0.476215859519373; 0.0334712764770122]
+k                  : 1.25
+control amplitude  : 0.003
+maxForward         : 10
+maxBackward        : 8
+maxTotalTransfer   : 18
+proxy radius       : 0.03
+curve maxPoints    : 100000
+curve maxDepth     : 15
+route rotations    : [0.25 0.333333 0.4 0.5 0.6 0.666667 0.75]
+route chain periods: [4 3 5 2 5 3 4]
+proxy components   : 26 (one per phase point, summed over the route)
+=====================================================
+
+--- part 1: curve cost census ---
+One row per curve build.  "unresolved" rows are the ones that
+have hit a budget: they cost the most and resolve nothing.
+
+                <strong>family</strong>                      <strong>componentID</strong>          <strong>direction</strong>    <strong>iterateCount</strong>    <strong>pointCount</strong>    <strong>subdivisionDepth</strong>    <strong>resolutionStatus</strong>    <strong>maximumGap</strong>    <strong>maximumMidpointDeviation</strong>    <strong>curvePointEvaluations</strong>     <strong>seconds</strong> 
+    <strong>_______________________________</strong>    <strong>______________________</strong>    <strong>_________</strong>    <strong>____________</strong>    <strong>__________</strong>    <strong>________________</strong>    <strong>________________</strong>    <strong>__________</strong>    <strong>________________________</strong>    <strong>_____________________</strong>    <strong>_________</strong>
+
+    {'forward-control-segment'    }    {'control-segment'   }        1              0              17               1             {'resolved'}        0.000375                    0                     33              0.018075
+    {'forward-control-segment'    }    {'control-segment'   }        1              1              17               1             {'resolved'}      0.00053033           5.5511e-17                     33             0.0019617
+    {'forward-control-segment'    }    {'control-segment'   }        1              2              65               3             {'resolved'}       0.0014785           2.7808e-08                    129             0.0034443
+    {'forward-control-segment'    }    {'control-segment'   }        1              3             129               4             {'resolved'}       0.0042442           7.0768e-07                    257               0.00115
+    {'forward-control-segment'    }    {'control-segment'   }        1              4             257               5             {'resolved'}        0.011458           1.4636e-05                    513             0.0016772
+    {'forward-control-segment'    }    {'control-segment'   }        1              5             364               6             {'resolved'}        0.017693           0.00014579                    727             0.0020626
+    {'forward-control-segment'    }    {'control-segment'   }        1              6             244               6             {'resolved'}        0.011868           0.00017035                    487             0.0014647
+    {'forward-control-segment'    }    {'control-segment'   }        1              7             305               6             {'resolved'}        0.012503           0.00036739                    609              0.001665
+    {'forward-control-segment'    }    {'control-segment'   }        1              8             745               7             {'resolved'}        0.035848           0.00097641                   1489             0.0045973
+    {'forward-control-segment'    }    {'control-segment'   }        1              9            2128               9             {'resolved'}         0.10415            0.0024466                   4255             0.0055607
+    {'forward-control-segment'    }    {'control-segment'   }        1             10            3487              10             {'resolved'}         0.28802             0.010725                   6973             0.0077913
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              0              64               1             {'resolved'}       0.0029441           3.6136e-05                    129             0.0030106
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              1              64               1             {'resolved'}        0.004312           5.7995e-05                    129             0.0014223
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              2              64               1             {'resolved'}       0.0058471           8.4368e-05                    129             0.0003709
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              3              85               2             {'resolved'}       0.0089299           0.00016085                    171             0.0014659
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              4             174               3             {'resolved'}        0.022939           0.00031629                    349             0.0009513
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              5             351               4             {'resolved'}         0.04003           0.00090426                    703              0.001354
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              6             366               5             {'resolved'}        0.067969            0.0022472                    733             0.0015612
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              7             373               5             {'resolved'}        0.077851            0.0030167                    747             0.0015153
+    {'backward-proxy-omega-0.25'  }    {'chain-007-phase-01'}       -1              8             443               6             {'resolved'}         0.13623            0.0085759                    887             0.0019813
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              0              64               1             {'resolved'}       0.0029441           3.6136e-05                    129              0.000313
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              1              64               1             {'resolved'}       0.0046867           6.3459e-05                    129             0.0002636
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              2              64               1             {'resolved'}       0.0067368            9.054e-05                    129             0.0002581
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              3             100               2             {'resolved'}        0.014347           0.00020731                    201              0.000409
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              4             187               3             {'resolved'}        0.021397           0.00035833                    375             0.0007686
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              5             228               4             {'resolved'}        0.032103           0.00063841                    457             0.0009282
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              6             228               5             {'resolved'}        0.060188            0.0016241                    457             0.0011173
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              7             361               5             {'resolved'}        0.091322            0.0060105                    723             0.0013925
+    {'backward-proxy-omega-0.3333'}    {'chain-004-phase-01'}       -1              8             393               6             {'resolved'}         0.14683              0.01094                    787              0.001713
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              0              64               1             {'resolved'}       0.0029441           3.6136e-05                    129             0.0003901
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              1              64               1             {'resolved'}       0.0042138           5.5103e-05                    129             0.0002567
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              2              75               2             {'resolved'}       0.0090842           0.00011297                    151              0.000394
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              3             102               2             {'resolved'}         0.01255           0.00018079                    205             0.0004177
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              4             105               3             {'resolved'}        0.015393           0.00024779                    211              0.000763
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              5             184               4             {'resolved'}        0.034885           0.00057164                    369             0.0008414
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              6             272               5             {'resolved'}        0.058242             0.001467                    545             0.0013314
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              7             284               4             {'resolved'}        0.055574            0.0024103                    569             0.0011572
+    {'backward-proxy-omega-0.4'   }    {'chain-014-phase-01'}       -1              8             453               5             {'resolved'}        0.092933            0.0041347                    907             0.0016839
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              0              64               1             {'resolved'}       0.0029441           3.6136e-05                    129             0.0003157
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              1              64               1             {'resolved'}       0.0059886           8.0305e-05                    129             0.0002813
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              2              98               2             {'resolved'}          0.0112           0.00014578                    197              0.000429
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              3             166               3             {'resolved'}        0.020985           0.00024799                    333             0.0007817
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              4             269               4             {'resolved'}        0.039107           0.00079407                    539             0.0013088
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              5             358               5             {'resolved'}        0.070882            0.0026261                    717             0.0016398
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              6             413               6             {'resolved'}         0.12538            0.0087146                    827             0.0021797
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              7             453               7             {'resolved'}         0.21024              0.02247                    907             0.0033843
+    {'backward-proxy-omega-0.5'   }    {'chain-002-phase-01'}       -1              8             537               7             {'resolved'}         0.36824             0.069436                   1075             0.0032764
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              0              64               1             {'resolved'}       0.0029441           3.6136e-05                    129             0.0004174
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              1              64               1             {'resolved'}       0.0042138           5.5103e-05                    129             0.0002951
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              2              75               2             {'resolved'}       0.0090842           0.00011297                    151             0.0004472
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              3             102               2             {'resolved'}         0.01255           0.00018079                    205             0.0005325
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              4             105               3             {'resolved'}        0.015393           0.00024779                    211             0.0006912
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              5             184               4             {'resolved'}        0.034885           0.00057164                    369             0.0010026
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              6             272               5             {'resolved'}        0.058242             0.001467                    545             0.0013602
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              7             284               4             {'resolved'}        0.055574            0.0024103                    569             0.0018047
+    {'backward-proxy-omega-0.6'   }    {'chain-016-phase-01'}       -1              8             453               5             {'resolved'}        0.092933            0.0041347                    907             0.0019187
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              0              64               1             {'resolved'}       0.0029441           3.6136e-05                    129             0.0007116
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              1              64               1             {'resolved'}       0.0046867           6.3459e-05                    129             0.0010065
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              2              99               2             {'resolved'}        0.012919             0.000166                    199             0.0009302
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              3             171               3             {'resolved'}        0.020535           0.00031601                    343             0.0013601
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              4             199               4             {'resolved'}        0.031561           0.00058689                    399             0.0015766
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              5             221               4             {'resolved'}        0.054194            0.0014286                    443             0.0016546
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              6             378               5             {'resolved'}        0.090546            0.0047808                    757             0.0024168
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              7             380               6             {'resolved'}         0.14356            0.0087867                    761             0.0033013
+    {'backward-proxy-omega-0.6667'}    {'chain-005-phase-01'}       -1              8             410               6             {'resolved'}         0.18888             0.017977                    821              0.003191
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              0              64               1             {'resolved'}       0.0029441           3.6136e-05                    129             0.0006262
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              1              64               1             {'resolved'}        0.004312           5.7995e-05                    129             0.0006237
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              2              64               1             {'resolved'}       0.0058471           8.4368e-05                    129             0.0007116
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              3              85               2             {'resolved'}       0.0089299           0.00016085                    171             0.0008925
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              4             174               3             {'resolved'}        0.022939           0.00031629                    349             0.0011343
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              5             351               4             {'resolved'}         0.04003           0.00090426                    703             0.0021004
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              6             366               5             {'resolved'}        0.067969            0.0022472                    733             0.0027066
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              7             373               5             {'resolved'}        0.077851            0.0030167                    747             0.0028657
+    {'backward-proxy-omega-0.75'  }    {'chain-010-phase-01'}       -1              8             443               6             {'resolved'}         0.13623            0.0085759                    887             0.0036565
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              0              64               1             {'resolved'}       0.0048438            0.0012153                    129             0.0047764
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              1             127               2             {'resolved'}        0.011926            0.0033959                    255             0.0007221
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              2             292               4             {'resolved'}        0.034327            0.0089946                    585             0.0020469
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              3             612               5             {'resolved'}         0.09919             0.013917                   1225             0.0031832
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              4             919               7             {'resolved'}         0.28102             0.021192                   1839             0.0068729
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              5            1143               8             {'resolved'}         0.67923              0.11558                   2287              0.010578
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              6            1546              10             {'resolved'}         0.87188              0.61726                   3093               0.01713
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              7            2508              12             {'resolved'}         0.86544              0.60591                   5017              0.020917
+    {'backward-final-rectangle'   }    {'final-target'      }       -1              8            4487              13             {'resolved'}         0.73328              0.58469                   8975              0.033311
+
+total census time            : 0.23 s
+slowest single curve         : 0.03 s (backward-final-rectangle, n=8, 4487 points, resolved)
+unresolved curves            : 0 of 83
+
+one forward family build     : 0.05 s
+switch probes per stage      : up to 19, each rebuilding that family
+implied forward cost / stage : 1 s if every probe is evaluated
+route stages                 : 7 proxies + 1 final
+
+--- part 2: function hotspots over one 120 s trial ---
+                        <strong>function</strong>                        <strong>totalSeconds</strong>    <strong>selfSeconds</strong>      <strong>calls</strong>   
+    <strong>________________________________________________</strong>    <strong>____________</strong>    <strong>___________</strong>    <strong>__________</strong>
+
+    "so_round1_diagnostics"                                119.04        0.0008361              1
+    "so_profile_paper_trial"                               119.04          8.2e-05              1
+    "so_profile_paper_trial>hotspot_profile"               119.04         0.075837              1
+    "so_multistage_targeting"                              118.96         0.023162              1
+    "so_resolve_connection"                                118.62          0.10827              3
+    "so_resolve_connection>test_resolved_split"            117.97         0.061928            789
+    "so_find_polyline_intersections_indexed"               117.61           111.23            789
+    "so_multistage_targeting>evaluate_switch_probes"       51.777        0.0071347              1
+    "so_curve_segments"                                    3.2475            2.439           1578
+    "unique"                                                3.096           1.6262     3.7522e+05
+    "unique>uniqueR2012a"                                  1.4698           1.4698     3.7522e+05
+    "so_lift_x_near"                                      0.87998          0.87998     6.2612e+05
+    "so_build_curve_family"                               0.51325        0.0087966             10
+    "so_build_curve"                                      0.50195         0.030102             96
+    "so_build_curve>intervals_needing_refinement"         0.31833         0.038668            412
+    "so_build_backward_cache"                             0.28066        0.0038989              2
+    "so_build_curve>cached_points"                        0.26882         0.042644           1332
+    "so_empty_connection"                                 0.21904           0.1884            829
+    "so_multistage_targeting>abort_result"                0.17044        0.0011342              1
+    "so_multistage_targeting>completed_result"             0.1693         0.011233              1
+
+wall clock                   : 120.92 s
+target reached               : 0
+failure category             : runtime_limit_exceeded
+stages attempted             : 1
+
+saved: C:\Users\npcoz\OneDrive - Imperial College London\Project\Codes\schroer_ott_targeting\outputs\paper_comparison\paper_trial_profile_01.mat
+PART C: COMPLETED
+
+===============================================================
+round 1 diagnostics finished
+log: C:\Users\npcoz\OneDrive - Imperial College London\Project\Codes\schroer_ott_targeting\so_round1_diagnostics.log
+===============================================================

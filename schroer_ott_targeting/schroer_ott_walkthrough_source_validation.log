@@ -1,0 +1,392 @@
+                                          <strong>ProjectPath</strong>                                                    <strong>MATLABVersion</strong>               <strong>RunPrincipalCase</strong>    <strong>RunCompleteTestSuite</strong>    <strong>RunDirectComparison</strong>
+    <strong>_______________________________________________________________________________________</strong>    <strong>__________________________________</strong>    <strong>________________</strong>    <strong>____________________</strong>    <strong>___________________</strong>
+
+    "C:\Users\npcoz\OneDrive - Imperial College London\Project\Codes\schroer_ott_targeting"    "26.1.0.3276743 (R2026a) Update 3"         true                  true                    true        
+
+                           <strong>FileSet</strong>                           <strong>Count</strong>                              <strong>InspectionNote</strong>                           
+    <strong>_____________________________________________________</strong>    <strong>_____</strong>    <strong>___________________________________________________________________</strong>
+
+    "Project .m files"                                        50      "Current folder inspected"                                         
+    "Project .mlx files"                                       0      "None before final build in this folder"                           
+    "Saved result .mat files"                                  1      "outputs folder inspected"                                         
+    "Saved output .csv files"                                  7      "outputs folder inspected"                                         
+    "Exported figure .png files"                               4      "outputs/figures inspected"                                        
+    "Older separate Schroer-Ott file sets found in Codes"      0      "No separate older Schroer-Ott implementation folders were present"
+
+     <strong>k</strong>      <strong>MaxAbsControl</strong>    <strong>ProxyTargetRadius</strong>    <strong>MinPeriod</strong>    <strong>MaxPeriod</strong>    <strong>OrbitResidualTolerance</strong>    <strong>DeduplicationTolerance</strong>    <strong>MaxForwardIterations</strong>    <strong>MaxBackwardIterations</strong>    <strong>MaxTotalTransferTime</strong>    <strong>MaxStages</strong>    <strong>InitialControlSamples</strong>    <strong>InitialBoundarySamples</strong>    <strong>MaxGapFraction</strong>    <strong>MidpointToleranceFraction</strong>    <strong>MaxCurvePoints</strong>    <strong>MaxSubdivisionDepth</strong>    <strong>IntersectionTolerance</strong>    <strong>ContainmentTolerance</strong>    <strong>PropagationConsistencyTolerance</strong>
+    <strong>____</strong>    <strong>_____________</strong>    <strong>_________________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>______________________</strong>    <strong>______________________</strong>    <strong>____________________</strong>    <strong>_____________________</strong>    <strong>____________________</strong>    <strong>_________</strong>    <strong>_____________________</strong>    <strong>______________________</strong>    <strong>______________</strong>    <strong>_________________________</strong>    <strong>______________</strong>    <strong>___________________</strong>    <strong>_____________________</strong>    <strong>____________________</strong>    <strong>_______________________________</strong>
+
+    1.25        0.003              0.03               2            5                1e-10                     2e-08                      11                       8                       19                16                 17                        64                   0.12                   0.06                   1e+05                 15                     1e-09                   1e-09                         1e-08             
+
+     <strong>Region</strong>     <strong>xMin</strong>    <strong>xMax</strong>    <strong>yMin</strong>    <strong>yMax</strong>    <strong>CenterX</strong>    <strong>CenterY</strong>    <strong>EquivalentPeriodicTargetCellsAccepted</strong>    <strong>TargetLiftShift</strong>
+    <strong>________</strong>    <strong>____</strong>    <strong>____</strong>    <strong>____</strong>    <strong>____</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>_____________________________________</strong>    <strong>_______________</strong>
+
+    "source"    0.64    0.69    0.48    0.52     0.665       0.5                      false                           0       
+    "target"    0.21    0.25    0.71    0.75      0.23      0.73                      false                           0       
+
+                    <strong>Check</strong>                     <strong>MeasuredValue</strong>          <strong>ExpectedCondition</strong>          <strong>Passed</strong>
+    <strong>______________________________________</strong>    <strong>_____________</strong>    <strong>_____________________________</strong>    <strong>______</strong>
+
+    "inverse consistency"                               0      "< 1e-12"                        true  
+    "Jacobian finite-difference agreement"     7.8594e-10      "< 1e-7"                         true  
+    "area preservation"                        2.2204e-16      "< 1e-12"                        true  
+    "cylinder wraps x only"                             1      "true; y remains unwrapped"      true  
+    "control bound convention"                      0.003      "|u| <= configured amplitude"    true  
+
+    <strong>SourceX</strong>    <strong>SourceY</strong>    <strong>MaxAbsControl</strong>    <strong>ControlParameterMin</strong>    <strong>ControlParameterMax</strong>    <strong>AllowEquivalentTargetCells</strong>    <strong>TargetLiftShift</strong>        <strong>LiftSelectionPolicy</strong>     
+    <strong>_______</strong>    <strong>_______</strong>    <strong>_____________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>__________________________</strong>    <strong>_______________</strong>    <strong>____________________________</strong>
+
+     0.665       0.5          0.003              -0.003                  0.003                     false                      0           "declared-fixed-target-cell"
+
+      <strong>ChainID</strong>      <strong>Period</strong>    <strong>Winding</strong>    <strong>RotationNumber</strong>     <strong>Residual</strong>      <strong>Trace</strong>     <strong>Residue</strong>        <strong>Eigenvalue1</strong>          <strong>Eigenvalue2</strong>          <strong>Classification</strong>       <strong>RetainedForRouting</strong>
+    <strong>___________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______________</strong>    <strong>__________</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>_________________</strong>    <strong>_________________</strong>    <strong>____________________</strong>    <strong>__________________</strong>
+
+    "chain-011"      5          1              0.2        1.2686e-14     11.895     -2.4737       11.81+0i          0.084673+0i          "direct-hyperbolic"           false       
+    "chain-012"      5          1              0.2        3.2398e-16    -7.4731      2.3683     -7.3368+0i           -0.1363+0i          "inverse-hyperbolic"          false       
+    "chain-007"      4          1             0.25        4.9651e-16     6.3029     -1.0757        6.14+0i           0.16287+0i          "direct-hyperbolic"           false       
+    "chain-008"      4          1             0.25        2.7756e-17    -2.1342      1.0335     -1.4394+0i          -0.69471+0i          "inverse-hyperbolic"          false       
+    "chain-003"      3          1          0.33333        1.1124e-14    -0.2285     0.55712    -0.11425+0.99345i    -0.11425-0.99345i    "elliptic"                    false       
+    "chain-004"      3          1          0.33333        2.2888e-16      4.309    -0.57725      4.0628+0i           0.24613+0i          "direct-hyperbolic"           false       
+    "chain-013"      5          2              0.4         1.831e-15    -1.4683     0.86706    -0.73413+0.67901i    -0.73413-0.67901i    "elliptic"                    false       
+    "chain-014"      5          2              0.4        2.4825e-16     5.6869    -0.92172      5.5052+0i           0.18165+0i          "direct-hyperbolic"           false       
+    "chain-001"      2          1              0.5        4.2672e-14     0.4375     0.39062     0.21875+0.97578i     0.21875-0.97578i    "elliptic"                    false       
+    "chain-002"      2          1              0.5        1.5701e-16     3.6065    -0.40163      3.3038+0i           0.30268+0i          "direct-hyperbolic"           false       
+    "chain-015"      5          3              0.6        2.2204e-16    -1.4683     0.86706    -0.73413+0.67901i    -0.73413-0.67901i    "elliptic"                    false       
+    "chain-016"      5          3              0.6        5.2369e-16     5.6869    -0.92172      5.5052+0i           0.18165+0i          "direct-hyperbolic"           false       
+    "chain-005"      3          2          0.66667        4.9651e-16      4.309    -0.57725      4.0628+0i           0.24613+0i          "direct-hyperbolic"           false       
+    "chain-006"      3          2          0.66667        5.0197e-14    -0.2285     0.55712    -0.11425+0.99345i    -0.11425-0.99345i    "elliptic"                    false       
+    "chain-009"      4          3             0.75        1.0474e-15    -2.1342      1.0335     -1.4394+0i          -0.69471+0i          "inverse-hyperbolic"          false       
+    "chain-010"      4          3             0.75        9.1551e-16     6.3029     -1.0757        6.14+0i           0.16287+0i          "direct-hyperbolic"           false       
+    "chain-017"      5          4              0.8        6.4541e-14     11.895     -2.4737       11.81+0i          0.084673+0i          "direct-hyperbolic"           false       
+    "chain-018"      5          4              0.8        1.7902e-15    -7.4731      2.3683     -0.1363+0i           -7.3368+0i          "inverse-hyperbolic"          false       
+
+    <strong>MinPeriod</strong>    <strong>MaxPeriod</strong>    <strong>RetainedChains</strong>    <strong>DirectHyperbolicChains</strong>    <strong>InverseHyperbolicChains</strong>    <strong>EllipticChains</strong>    <strong>MaximumResidual</strong>
+    <strong>_________</strong>    <strong>_________</strong>    <strong>______________</strong>    <strong>______________________</strong>    <strong>_______________________</strong>    <strong>______________</strong>    <strong>_______________</strong>
+
+        2            5              18                    9                          4                     5             6.4541e-14   
+
+      <strong>ChainID</strong>      <strong>Period</strong>    <strong>Winding</strong>    <strong>RotationNumber</strong>       <strong>Classification</strong>        <strong>Trace</strong>     <strong>StableEigenvalue</strong>    <strong>UnstableEigenvalue</strong>    <strong>AbsStableEigenvalue</strong>    <strong>AbsUnstableEigenvalue</strong>
+    <strong>___________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______________</strong>    <strong>____________________</strong>    <strong>_______</strong>    <strong>________________</strong>    <strong>__________________</strong>    <strong>___________________</strong>    <strong>_____________________</strong>
+
+    "chain-002"      2          1              0.5        "direct-hyperbolic"      3.6065         0.30268              3.3038                0.30268                 3.3038        
+    "chain-004"      3          1          0.33333        "direct-hyperbolic"       4.309         0.24613              4.0628                0.24613                 4.0628        
+    "chain-005"      3          2          0.66667        "direct-hyperbolic"       4.309         0.24613              4.0628                0.24613                 4.0628        
+    "chain-007"      4          1             0.25        "direct-hyperbolic"      6.3029         0.16287                6.14                0.16287                   6.14        
+    "chain-008"      4          1             0.25        "inverse-hyperbolic"    -2.1342        -0.69471             -1.4394                0.69471                 1.4394        
+    "chain-009"      4          3             0.75        "inverse-hyperbolic"    -2.1342        -0.69471             -1.4394                0.69471                 1.4394        
+    "chain-010"      4          3             0.75        "direct-hyperbolic"      6.3029         0.16287                6.14                0.16287                   6.14        
+    "chain-011"      5          1              0.2        "direct-hyperbolic"      11.895        0.084673               11.81               0.084673                  11.81        
+    "chain-012"      5          1              0.2        "inverse-hyperbolic"    -7.4731         -0.1363             -7.3368                 0.1363                 7.3368        
+    "chain-014"      5          2              0.4        "direct-hyperbolic"      5.6869         0.18165              5.5052                0.18165                 5.5052        
+    "chain-016"      5          3              0.6        "direct-hyperbolic"      5.6869         0.18165              5.5052                0.18165                 5.5052        
+    "chain-017"      5          4              0.8        "direct-hyperbolic"      11.895        0.084673               11.81               0.084673                  11.81        
+    "chain-018"      5          4              0.8        "inverse-hyperbolic"    -7.4731         -0.1363             -7.3368                 0.1363                 7.3368        
+
+      <strong>ChainID</strong>      <strong>RotationNumber</strong>    <strong>PhasePointIndex</strong>    <strong>BranchType</strong>    <strong>Sign</strong>    <strong>ResolutionStatus</strong>    <strong>PointCount</strong>    <strong>MaximumGap</strong>    <strong>MaximumMidpointDeviation</strong>
+    <strong>___________</strong>    <strong>______________</strong>    <strong>_______________</strong>    <strong>__________</strong>    <strong>____</strong>    <strong>________________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>________________________</strong>
+
+    "chain-016"           0.6               1           "unstable"     -1        "resolved"          257          0.01135            0.00016946       
+    "chain-016"           0.6               1           "stable"       -1        "resolved"          195         0.011113            9.6343e-05       
+    "chain-016"           0.6               1           "unstable"      1        "resolved"          255         0.011635            0.00012989       
+    "chain-016"           0.6               1           "stable"        1        "resolved"          435         0.012836            7.2128e-05       
+    "chain-016"           0.6               2           "unstable"     -1        "resolved"          182         0.011218            0.00011905       
+    "chain-016"           0.6               2           "stable"       -1        "resolved"          230         0.011164            0.00015262       
+    "chain-016"           0.6               2           "unstable"      1        "resolved"          286         0.011598            8.2625e-05       
+    "chain-016"           0.6               2           "stable"        1        "resolved"          258         0.011637             0.0001109       
+    "chain-016"           0.6               3           "unstable"     -1        "resolved"          506         0.013084            4.2905e-05       
+    "chain-016"           0.6               3           "stable"       -1        "resolved"          509         0.017063            0.00013406       
+    "chain-016"           0.6               3           "unstable"      1        "resolved"          228         0.011186            6.2565e-05       
+    "chain-016"           0.6               3           "stable"        1        "resolved"          200         0.011071            0.00011788       
+    "chain-016"           0.6               4           "unstable"     -1        "resolved"          364         0.012319            0.00013187       
+    "chain-016"           0.6               4           "stable"       -1        "resolved"          459         0.013615            8.8049e-05       
+    "chain-016"           0.6               4           "unstable"      1        "resolved"          257         0.011171             0.0001661       
+    "chain-016"           0.6               4           "stable"        1        "resolved"          186         0.011009            0.00012662       
+    "chain-016"           0.6               5           "unstable"     -1        "resolved"          205          0.01113            7.8713e-05       
+    "chain-016"           0.6               5           "stable"       -1        "resolved"          230         0.011124            0.00011061       
+    "chain-016"           0.6               5           "unstable"      1        "resolved"          508         0.013743            5.5626e-05       
+    "chain-016"           0.6               5           "stable"        1        "resolved"          508         0.015935            0.00011862       
+    "chain-005"       0.66667               1           "unstable"     -1        "resolved"          471         0.029498            0.00052577       
+    "chain-005"       0.66667               1           "stable"       -1        "resolved"          468         0.032616            0.00064723       
+    "chain-005"       0.66667               1           "unstable"      1        "resolved"          588         0.027486            0.00066476       
+    "chain-005"       0.66667               1           "stable"        1        "resolved"          825         0.045469             0.0010053       
+    "chain-005"       0.66667               2           "unstable"     -1        "resolved"          975         0.072023             0.0012063       
+    "chain-005"       0.66667               2           "stable"       -1        "resolved"          815         0.039446             0.0011585       
+    "chain-005"       0.66667               2           "unstable"      1        "resolved"          646         0.065768             0.0015782       
+    "chain-005"       0.66667               2           "stable"        1        "resolved"          614          0.04261             0.0010044       
+    "chain-005"       0.66667               3           "unstable"     -1        "resolved"          873         0.042036            0.00050301       
+    "chain-005"       0.66667               3           "stable"       -1        "resolved"          707         0.051705             0.0010157       
+    "chain-005"       0.66667               3           "unstable"      1        "resolved"          563         0.031011            0.00061411       
+    "chain-005"       0.66667               3           "stable"        1        "resolved"          663         0.047135              0.001349       
+
+    <strong>RouteStage</strong>       <strong>TargetID</strong>       <strong>Period</strong>    <strong>Winding</strong>    <strong>RotationNumber</strong>        <strong>TargetKind</strong>         <strong>NumberOfPhaseComponents</strong>    <strong>ProxyRadius</strong>    <strong>MinimumY</strong>    <strong>MaximumY</strong>
+    <strong>__________</strong>    <strong>______________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______________</strong>    <strong>___________________</strong>    <strong>_______________________</strong>    <strong>___________</strong>    <strong>________</strong>    <strong>________</strong>
+
+        1         "chain-016"          5          3             0.6        "direct-hyperbolic"               5                  0.03         0.4958     0.67033 
+        2         "chain-005"          3          2         0.66667        "direct-hyperbolic"               3                  0.03        0.53483     0.73258 
+        3         "final-target"     NaN        NaN             NaN        "rectangle"                       1                   NaN           0.71        0.75 
+
+      <strong>ChainID</strong>      <strong>Period</strong>    <strong>Winding</strong>    <strong>RotationNumber</strong>     <strong>Residual</strong>      <strong>Trace</strong>     <strong>Residue</strong>        <strong>Eigenvalue1</strong>          <strong>Eigenvalue2</strong>          <strong>Classification</strong>       <strong>RetainedForRouting</strong>
+    <strong>___________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______________</strong>    <strong>__________</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>_________________</strong>    <strong>_________________</strong>    <strong>____________________</strong>    <strong>__________________</strong>
+
+    "chain-011"      5          1              0.2        1.2686e-14     11.895     -2.4737       11.81+0i          0.084673+0i          "direct-hyperbolic"           false       
+    "chain-012"      5          1              0.2        3.2398e-16    -7.4731      2.3683     -7.3368+0i           -0.1363+0i          "inverse-hyperbolic"          false       
+    "chain-007"      4          1             0.25        4.9651e-16     6.3029     -1.0757        6.14+0i           0.16287+0i          "direct-hyperbolic"           false       
+    "chain-008"      4          1             0.25        2.7756e-17    -2.1342      1.0335     -1.4394+0i          -0.69471+0i          "inverse-hyperbolic"          false       
+    "chain-003"      3          1          0.33333        1.1124e-14    -0.2285     0.55712    -0.11425+0.99345i    -0.11425-0.99345i    "elliptic"                    false       
+    "chain-004"      3          1          0.33333        2.2888e-16      4.309    -0.57725      4.0628+0i           0.24613+0i          "direct-hyperbolic"           false       
+    "chain-013"      5          2              0.4         1.831e-15    -1.4683     0.86706    -0.73413+0.67901i    -0.73413-0.67901i    "elliptic"                    false       
+    "chain-014"      5          2              0.4        2.4825e-16     5.6869    -0.92172      5.5052+0i           0.18165+0i          "direct-hyperbolic"           false       
+    "chain-001"      2          1              0.5        4.2672e-14     0.4375     0.39062     0.21875+0.97578i     0.21875-0.97578i    "elliptic"                    false       
+    "chain-002"      2          1              0.5        1.5701e-16     3.6065    -0.40163      3.3038+0i           0.30268+0i          "direct-hyperbolic"           false       
+    "chain-015"      5          3              0.6        2.2204e-16    -1.4683     0.86706    -0.73413+0.67901i    -0.73413-0.67901i    "elliptic"                    false       
+    "chain-016"      5          3              0.6        5.2369e-16     5.6869    -0.92172      5.5052+0i           0.18165+0i          "direct-hyperbolic"           true        
+    "chain-005"      3          2          0.66667        4.9651e-16      4.309    -0.57725      4.0628+0i           0.24613+0i          "direct-hyperbolic"           true        
+    "chain-006"      3          2          0.66667        5.0197e-14    -0.2285     0.55712    -0.11425+0.99345i    -0.11425-0.99345i    "elliptic"                    false       
+    "chain-009"      4          3             0.75        1.0474e-15    -2.1342      1.0335     -1.4394+0i          -0.69471+0i          "inverse-hyperbolic"          false       
+    "chain-010"      4          3             0.75        9.1551e-16     6.3029     -1.0757        6.14+0i           0.16287+0i          "direct-hyperbolic"           false       
+    "chain-017"      5          4              0.8        6.4541e-14     11.895     -2.4737       11.81+0i          0.084673+0i          "direct-hyperbolic"           false       
+    "chain-018"      5          4              0.8        1.7902e-15    -7.4731      2.3683     -0.1363+0i           -7.3368+0i          "inverse-hyperbolic"          false       
+
+    <strong>Stage</strong>     <strong>TargetID</strong>        <strong>Control</strong>      <strong>ForwardIterates</strong>    <strong>BackwardIterates</strong>    <strong>TotalIterates</strong>    <strong>IntersectionResidual</strong>    <strong>TargetContained</strong>    <strong>ForwardPointCount</strong>    <strong>BackwardPointCount</strong>    <strong>ForwardResolutionStatus</strong>    <strong>BackwardResolutionStatus</strong>
+    <strong>_____</strong>    <strong>___________</strong>    <strong>___________</strong>    <strong>_______________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>____________________</strong>    <strong>_______________</strong>    <strong>_________________</strong>    <strong>__________________</strong>    <strong>_______________________</strong>    <strong>________________________</strong>
+
+      2      "chain-005"    -0.00026746           8                  1                  9               1.4826e-10              true                 201                   88                  "resolved"                  "resolved"       
+
+    <strong>stage</strong>    <strong>targetKind</strong>       <strong>targetID</strong>       <strong>rotationNumber</strong>    <strong>connectionSuccess</strong>    <strong>nForward</strong>    <strong>nBackward</strong>    <strong>tauResolved</strong>     <strong>controlY</strong>        <strong>targetComponent</strong>       <strong>targetPhasePointIndex</strong>    <strong>intersectionResidual</strong>    <strong>targetContained</strong>    <strong>selectedSwitchIndex</strong>    <strong>skipped</strong>    <strong>timeMinimumCertified</strong>    <strong>selectionCertified</strong>    <strong>resolutionHoles</strong>
+    <strong>_____</strong>    <strong>__________</strong>    <strong>______________</strong>    <strong>______________</strong>    <strong>_________________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>___________</strong>    <strong>___________</strong>    <strong>____________________</strong>    <strong>_____________________</strong>    <strong>____________________</strong>    <strong>_______________</strong>    <strong>___________________</strong>    <strong>_______</strong>    <strong>____________________</strong>    <strong>__________________</strong>    <strong>_______________</strong>
+
+      1       "proxy"      "chain-016"              0.6              true              0            0             0                   0    "chain-016-phase-01"               1                           0              true                    0             true             true                   true                   0       
+      2       "proxy"      "chain-005"          0.66667              true              8            1             9         -0.00026746    "chain-005-phase-03"               3                  1.4826e-10              true                    9             false            true                   true                   0       
+      3       "final"      "final-target"           NaN              true              0            0             0               0.003    "final-target"                   NaN                           0              true                  NaN             false            true                   true                   0       
+
+    <strong>Stage</strong>    <strong>TargetKind</strong>      <strong>NextTarget</strong>      <strong>SelectedUPOChain</strong>    <strong>SelectedPhasePoint</strong>      <strong>Control</strong>      <strong>ForwardIterations</strong>    <strong>BackwardIterations</strong>    <strong>TotalConnectionTime</strong>    <strong>IntersectionResidual</strong>    <strong>ReplayResidual</strong>    <strong>SearchTargetContained</strong>    <strong>ReplayTargetContained</strong>    <strong>ControlWithinBound</strong>    <strong>UnresolvedSearchStatus</strong>    <strong>ResolutionHoles</strong>    <strong>RuntimeSeconds</strong>
+    <strong>_____</strong>    <strong>__________</strong>    <strong>______________</strong>    <strong>________________</strong>    <strong>__________________</strong>    <strong>___________</strong>    <strong>_________________</strong>    <strong>__________________</strong>    <strong>___________________</strong>    <strong>____________________</strong>    <strong>______________</strong>    <strong>_____________________</strong>    <strong>_____________________</strong>    <strong>__________________</strong>    <strong>______________________</strong>    <strong>_______________</strong>    <strong>______________</strong>
+
+      1       "proxy"      "chain-016"         "chain-016"                1                      0            0                    0                      0                           0               0                   true                     true                   true                    false                    0                2.8579   
+      2       "proxy"      "chain-005"         "chain-005"                3            -0.00026746            8                    1                      9                  1.4826e-10               0                   true                     true                   true                    false                    0                27.245   
+      3       "final"      "final-target"      ""                       NaN                  0.003            0                    0                      0                           0               0                   true                     true                   true                    false                    0             0.0086622   
+
+    <strong>Stage</strong>    <strong>CurrentTarget</strong>      <strong>NextTarget</strong>      <strong>SwitchIndexJ</strong>    <strong>FiniteCandidate</strong>    <strong>Pruned</strong>    <strong>ObjectiveJ</strong>    <strong>TauToNext</strong>    <strong>NextControl</strong>    <strong>NextIntersectionResidual</strong>    <strong>Selected</strong>
+    <strong>_____</strong>    <strong>_____________</strong>    <strong>______________</strong>    <strong>____________</strong>    <strong>_______________</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>___________</strong>    <strong>________________________</strong>    <strong>________</strong>
+
+      1       "chain-016"     "chain-005"            0               true          false          9            9        -0.00026746           1.4826e-10            true   
+      2       "chain-005"     "final-target"         0               true          false         17           17        -2.1505e-05           9.0801e-15            false  
+      2       "chain-005"     "final-target"         1               true          false         17           16         0.00037403           2.8437e-10            false  
+      2       "chain-005"     "final-target"         2               true          false         12           10          0.0028409           7.3583e-11            false  
+      2       "chain-005"     "final-target"         3               true          false         17           14         0.00072378           5.1201e-10            false  
+      2       "chain-005"     "final-target"         4               true          false         17           13         0.00066822           1.3951e-10            false  
+      2       "chain-005"     "final-target"         5               true          false         17           12          0.0011289           2.4833e-10            false  
+      2       "chain-005"     "final-target"         6               true          false         17           11          0.0013894           6.7712e-12            false  
+      2       "chain-005"     "final-target"         7               true          false         17           10         0.00089473           2.4854e-11            false  
+      2       "chain-005"     "final-target"         8               true          false         17            9           0.002165           2.8255e-11            false  
+      2       "chain-005"     "final-target"         9               true          false          9            0              0.003                    0            true   
+
+    <strong>Success</strong>    <strong>FinalTargetContained</strong>    <strong>TotalStages</strong>        <strong>SelectedUPORoute</strong>        <strong>NumberOfAppliedControls</strong>    <strong>TotalControlledIterations</strong>    <strong>FinalLiftedX</strong>    <strong>FinalXMod1</strong>    <strong>FinalY</strong>     <strong>MaximumAbsControl</strong>    <strong>ControlBoundPassed</strong>    <strong>ReplayConsistencyPassed</strong>    <strong>MaximumIntersectionResidual</strong>    <strong>UnresolvedNumericalEvents</strong>    <strong>MeasuredRuntimeSeconds</strong>
+    <strong>_______</strong>    <strong>____________________</strong>    <strong>___________</strong>    <strong>________________________</strong>    <strong>_______________________</strong>    <strong>_________________________</strong>    <strong>____________</strong>    <strong>__________</strong>    <strong>_______</strong>    <strong>_________________</strong>    <strong>__________________</strong>    <strong>_______________________</strong>    <strong>___________________________</strong>    <strong>_________________________</strong>    <strong>______________________</strong>
+
+     true             true                  3         "chain-016 -> chain-005"               2                           9                   6.2486         0.2486      0.71022          0.003                true                     true                      1.4826e-10                         0                        30.184        
+
+    <strong>stage</strong>       <strong>targetID</strong>        <strong>controlY</strong>      <strong>executedIterations</strong>    <strong>cumulativeIterations</strong>    <strong>stateX</strong>    <strong>stateY</strong>     <strong>propagationConsistencyError</strong>
+    <strong>_____</strong>    <strong>______________</strong>    <strong>___________</strong>    <strong>__________________</strong>    <strong>____________________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>___________________________</strong>
+
+      2      "chain-005"       -0.00026746            9                      9              6.2486    0.70722                 0             
+      3      "final-target"          0.003            0                      9              6.2486    0.71022                 0             
+
+    <strong>forwardFamilyBuilds</strong>    <strong>backwardFamilyBuilds</strong>    <strong>backwardFamilyCacheReuses</strong>    <strong>indexedCrossingQueries</strong>    <strong>exactSegmentTestsAfterSpatialFiltering</strong>    <strong>naiveComparisonsAvoided</strong>    <strong>jProbesPruned</strong>    <strong>runtimeByStage</strong>    <strong>peakCurvePointCount</strong>
+    <strong>___________________</strong>    <strong>____________________</strong>    <strong>_________________________</strong>    <strong>______________________</strong>    <strong>______________________________________</strong>    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>______________</strong>    <strong>___________________</strong>
+
+            10                      4                         12                         876                               128                            2.0009e+07                 0           {0×0 double}             823        
+
+              <strong>Strategy</strong>               <strong>Success</strong>    <strong>IterationsReported</strong>    <strong>NumberOfControls</strong>    <strong>MaximumAbsControl</strong>    <strong>FinalInsideTarget</strong>    <strong>FinalXMod1</strong>    <strong>FinalY</strong>                                  <strong>Note</strong>                              
+    <strong>_____________________________</strong>    <strong>_______</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_________________</strong>    <strong>_________________</strong>    <strong>__________</strong>    <strong>_______</strong>    <strong>_______________________________________________________________</strong>
+
+    "multistage controlled"           true               9                   2                    0.003              true             0.2486      0.71022    "computed by so_multistage_targeting"                          
+    "uncontrolled"                    true              17                   0                        0              true            0.24587      0.71162    "first uncontrolled target entry within horizon"               
+    "direct one-stage controlled"     true              17                   1               2.1505e-05              true             0.2421         0.71    "computed by so_resolve_connection from source to final target"
+
+                              <strong>name</strong>                              <strong>passed</strong>    <strong>message</strong>
+    <strong>________________________________________________________</strong>    <strong>______</strong>    <strong>_______</strong>
+
+    "lifted forward/inverse consistency"                        true        ""   
+    "cylinder forward/inverse consistency"                      true        ""   
+    "analytic Jacobian versus finite differences"               true        ""   
+    "area preservation"                                         true        ""   
+    "wrapped-x/lifted-x trajectory consistency"                 true        ""   
+    "y remains unwrapped"                                       true        ""   
+    "adaptive refinement of folded curve"                       true        ""   
+    "midpoint deviation detects hidden fold"                    true        ""   
+    "closed-boundary wraparound refinement"                     true        ""   
+    "indexed intersection versus exhaustive"                    true        ""   
+    "crossing across x=0"                                       true        ""   
+    "known ordinary polyline crossing"                          true        ""   
+    "bracket-specific recovery of constructed u0"               true        ""   
+    "circular-target containment"                               true        ""   
+    "rectangle containment"                                     true        ""   
+    "periodic-boundary rectangle containment"                   true        ""   
+    "diagonal direct time ordering"                             true        ""   
+    "best resolved selection with unresolved deep split"        true        ""   
+    "one unresolved split does not abort direct run"            true        ""   
+    "incremental family versus independent recomputation"       true        ""   
+    "shared backward cache versus independent recomputation"    true        ""   
+    "union target minimises over phase components"              true        ""   
+    "phase-point tie-breaking"                                  true        ""   
+    "diagonal tau no worse than alternating diagnostic"         true        ""   
+    "fixed-(p,m) periodic residuals"                            true        ""   
+    "multiple chains retained for same (p,m)"                   true        ""   
+    "direct-hyperbolic omega=1/4 recovered"                     true        ""   
+    "cyclic/cylinder deduplication"                             true        ""   
+    "inverse-hyperbolic chains excluded from route"             true        ""   
+    "elliptic chains excluded from route"                       true        ""   
+    "near-parabolic classification"                             true        ""   
+    "executed control bounds"                                   true        ""   
+    "planned-versus-actual propagation consistency"             true        ""   
+    "correct j=0 treatment"                                     true        ""   
+    "exact pruning rule"                                        true        ""   
+    "executed-time accounting"                                  true        ""   
+    "final target independent containment"                      true        ""   
+
+                              <strong>name</strong>                              <strong>passed</strong>    <strong>message</strong>
+    <strong>________________________________________________________</strong>    <strong>______</strong>    <strong>_______</strong>
+
+    "lifted forward/inverse consistency"                        true        ""   
+    "cylinder forward/inverse consistency"                      true        ""   
+    "analytic Jacobian versus finite differences"               true        ""   
+    "area preservation"                                         true        ""   
+    "wrapped-x/lifted-x trajectory consistency"                 true        ""   
+    "y remains unwrapped"                                       true        ""   
+    "adaptive refinement of folded curve"                       true        ""   
+    "midpoint deviation detects hidden fold"                    true        ""   
+    "closed-boundary wraparound refinement"                     true        ""   
+    "indexed intersection versus exhaustive"                    true        ""   
+    "crossing across x=0"                                       true        ""   
+    "known ordinary polyline crossing"                          true        ""   
+    "bracket-specific recovery of constructed u0"               true        ""   
+    "circular-target containment"                               true        ""   
+    "rectangle containment"                                     true        ""   
+    "periodic-boundary rectangle containment"                   true        ""   
+    "diagonal direct time ordering"                             true        ""   
+    "best resolved selection with unresolved deep split"        true        ""   
+    "one unresolved split does not abort direct run"            true        ""   
+    "incremental family versus independent recomputation"       true        ""   
+    "shared backward cache versus independent recomputation"    true        ""   
+    "union target minimises over phase components"              true        ""   
+    "phase-point tie-breaking"                                  true        ""   
+    "diagonal tau no worse than alternating diagnostic"         true        ""   
+    "fixed-(p,m) periodic residuals"                            true        ""   
+    "multiple chains retained for same (p,m)"                   true        ""   
+    "direct-hyperbolic omega=1/4 recovered"                     true        ""   
+    "cyclic/cylinder deduplication"                             true        ""   
+    "inverse-hyperbolic chains excluded from route"             true        ""   
+    "elliptic chains excluded from route"                       true        ""   
+    "near-parabolic classification"                             true        ""   
+    "executed control bounds"                                   true        ""   
+    "planned-versus-actual propagation consistency"             true        ""   
+    "correct j=0 treatment"                                     true        ""   
+    "exact pruning rule"                                        true        ""   
+    "executed-time accounting"                                  true        ""   
+    "final target independent containment"                      true        ""   
+
+                            <strong>TestName</strong>                            <strong>Passed</strong>                  <strong>Scope</strong>                               <strong>ExpectedCondition</strong>                          <strong>MeasuredValue</strong>                                                  <strong>CriticalInspectionNote</strong>                                         <strong>FailureMessage</strong>
+    <strong>________________________________________________________</strong>    <strong>______</strong>    <strong>_________________________________</strong>    <strong>___________________________________________</strong>    <strong>_______________________________</strong>    <strong>________________________________________________________________________________________________</strong>    <strong>______________</strong>
+
+    "lifted forward/inverse consistency"                        true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "cylinder forward/inverse consistency"                      true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "analytic Jacobian versus finite differences"               true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "area preservation"                                         true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "wrapped-x/lifted-x trajectory consistency"                 true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "y remains unwrapped"                                       true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "adaptive refinement of folded curve"                       true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "midpoint deviation detects hidden fold"                    true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "closed-boundary wraparound refinement"                     true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "indexed intersection versus exhaustive"                    true      "connection-solver validation"       "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "crossing across x=0"                                       true      "connection-solver validation"       "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "known ordinary polyline crossing"                          true      "connection-solver validation"       "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "bracket-specific recovery of constructed u0"               true      "connection-solver validation"       "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "circular-target containment"                               true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "rectangle containment"                                     true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "periodic-boundary rectangle containment"                   true      "periodic-orbit/route validation"    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "diagonal direct time ordering"                             true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "best resolved selection with unresolved deep split"        true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "one unresolved split does not abort direct run"            true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "incremental family versus independent recomputation"       true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "shared backward cache versus independent recomputation"    true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "union target minimises over phase components"              true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "phase-point tie-breaking"                                  true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "diagonal tau no worse than alternating diagnostic"         true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "weak diagnostic: compares finite result against Inf, not a strong alternative-policy benchmark"          ""      
+    "fixed-(p,m) periodic residuals"                            true      "periodic-orbit/route validation"    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "multiple chains retained for same (p,m)"                   true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "direct-hyperbolic omega=1/4 recovered"                     true      "periodic-orbit/route validation"    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "enumeration regression: useful but tied to current period/seed settings"                                 ""      
+    "cyclic/cylinder deduplication"                             true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "inverse-hyperbolic chains excluded from route"             true      "periodic-orbit/route validation"    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "elliptic chains excluded from route"                       true      "periodic-orbit/route validation"    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "near-parabolic classification"                             true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "executed control bounds"                                   true      "end-to-end validation"              "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "planned-versus-actual propagation consistency"             true      "end-to-end validation"              "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "correct j=0 treatment"                                     true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "brittle regression: depends on enumeration-specific chain label"                                         ""      
+    "exact pruning rule"                                        true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "executed-time accounting"                                  true      "unit/regression"                    "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+    "final target independent containment"                      true      "end-to-end validation"              "assertion in test_schroer_ott_first_light"    "not exported by test function"    "useful numerical consistency test"                                                                       ""      
+
+                           <strong>Item</strong>                                               <strong>StatusInThisProject</strong>                                                <strong>Implication</strong>                        
+    <strong>__________________________________________________</strong>    <strong>____________________________________________________________</strong>    <strong>__________________________________________________________</strong>
+
+    "Present first-light implementation"                  "Verified here for the declared source, target, k and route"    "Directly computed in this Live Script"                   
+    "Published 125--132 iteration multi-source result"    "Context only; not a single-source acceptance criterion"        "Would require matching source set and numerical protocol"
+    "Published k=1.01 long-transfer case"                 "Not reproduced by the current files"                           "Would require a separate configured experiment"          
+
+                       <strong>Experiment</strong>                                                   <strong>Status</strong>                                         <strong>ConfigurationOrLimitation</strong>        
+    <strong>________________________________________________</strong>    <strong>_______________________________________________________________</strong>    <strong>_________________________________________</strong>
+
+    "Direct one-stage targeting"                        "computed by so_resolve_connection from source to final target"    "same source and target, same cfg limits"
+    "Uncontrolled finite-horizon propagation"           "first uncontrolled target entry within horizon"                   "finite declared horizon only"           
+    "Multiple source states"                            "absent from current files"                                        "future validation requirement"          
+    "Noise or model-error robustness"                   "absent from current files"                                        "future validation requirement"          
+    "Parameter sweep in k"                              "absent from current files"                                        "future validation requirement"          
+    "Sensitivity to proxy radius and UPO period cap"    "not completed as a saved validated study"                         "future validation requirement"          
+
+                  <strong>Topic</strong>                                            <strong>Interpretation</strong>                         
+    <strong>__________________________________</strong>    <strong>________________________________________________________________</strong>
+
+    "Forward-backward solver"             "Resolved intersections are refined and replayed"               
+    "Independent replay"                  "Every accepted stage is recomputed from its selected control"  
+    "Switching principle"                 "Implements J(j)=j+tau(w_j,B_next) over tested candidates"      
+    "UPO proxy route"                     "Uses direct-hyperbolic rotation-ordered proxy balls"           
+    "Pass geometry"                       "Diagnostic manifolds only; not an operational pass network"    
+    "Published benchmark reproduction"    "Present case is not forced to match unrelated published values"
+    "General robustness"                  "Not established beyond the cases computed here"                
+
+                     <strong>FileName</strong>                                         <strong>Role</strong>                        <strong>Exists</strong>
+    <strong>__________________________________________</strong>    <strong>____________________________________________</strong>    <strong>______</strong>
+
+    "schroer_ott_default_config.m"                "central configuration"                         true  
+    "so_standard_map_lifted.m"                    "lifted forward standard map"                   true  
+    "so_standard_map_inverse_lifted.m"            "lifted inverse standard map"                   true  
+    "so_standard_map_cylinder.m"                  "cylinder display forward map"                  true  
+    "so_standard_map_inverse_cylinder.m"          "cylinder display inverse map"                  true  
+    "so_jacobian.m"                               "analytic map Jacobian"                         true  
+    "so_jacobian_product.m"                       "monodromy products"                            true  
+    "so_enumerate_periodic_orbits.m"              "periodic orbit enumeration"                    true  
+    "so_newton_periodic_orbit.m"                  "Newton solve for F^p(z)-z=(m,0)"               true  
+    "so_periodic_chain_from_root.m"               "periodic chain construction"                   true  
+    "so_classify_trace.m"                         "trace-based stability classification"          true  
+    "so_construct_first_light_route.m"            "rotation-ordered UPO-proxy route"              true  
+    "so_make_circle_component.m"                  "UPO proxy target balls"                        true  
+    "so_make_rectangle_component.m"               "final target rectangle component"              true  
+    "so_make_control_component.m"                 "admissible vertical control segment"           true  
+    "so_build_curve.m"                            "adaptive curve image/preimage"                 true  
+    "so_build_curve_family.m"                     "forward/backward curve families"               true  
+    "so_build_backward_cache.m"                   "cached target preimages"                       true  
+    "so_find_polyline_intersections_indexed.m"    "periodic-x polyline intersections"             true  
+    "so_refine_intersection.m"                    "Newton refinement in original parameters"      true  
+    "so_resolve_connection.m"                     "minimum-time forward/backward connection"      true  
+    "so_multistage_targeting.m"                   "multistage switching and replay"               true  
+    "so_compute_diagnostic_manifolds.m"           "diagnostic stable/unstable manifold clouds"    true  
+    "so_stage_summary_table.m"                    "stage summary table"                           true  
+    "test_schroer_ott_first_light.m"              "available validation suite"                    true  
+
+     <strong>k</strong>            <strong>MapConvention</strong>          <strong>MaxAbsControl</strong>            <strong>SourceDefinition</strong>                        <strong>TargetDefinition</strong>                <strong>MinUPOPeriod</strong>    <strong>MaxUPOPeriod</strong>    <strong>SelectedRouteRotationNumbers</strong>    <strong>ProxyTargetRadius</strong>    <strong>MaxForwardIterations</strong>    <strong>MaxBackwardIterations</strong>    <strong>MaxTotalTransferTime</strong>              <strong>SwitchingRule</strong>              <strong>PrincipalSuccess</strong>    <strong>FinalContainmentPassed</strong>    <strong>TotalExecutedIterations</strong>    <strong>AllTestsPassed</strong>    <strong>NumberOfTestsExecuted</strong>
+    <strong>____</strong>    <strong>_________________________</strong>    <strong>_____________</strong>    <strong>________________________________</strong>    <strong>________________________________________</strong>    <strong>____________</strong>    <strong>____________</strong>    <strong>____________________________</strong>    <strong>_________________</strong>    <strong>____________________</strong>    <strong>_____________________</strong>    <strong>____________________</strong>    <strong>_________________________________</strong>    <strong>________________</strong>    <strong>______________________</strong>    <strong>_______________________</strong>    <strong>______________</strong>    <strong>_____________________</strong>
+
+    1.25    "x periodic, y unwrapped"        0.003        "x=[0.64, 0.69], y=[0.48, 0.52]"    "x=[0.21, 0.25], y=[0.71, 0.75], lift=0"         2               5                "[0.6 0.666667]"                0.03                    11                       8                       19             "minimise J(j)=j+tau(w_j,B_next)"         true                   true                         9                   true                   37          
+
+Schroer-Ott Live Script walkthrough completed successfully.

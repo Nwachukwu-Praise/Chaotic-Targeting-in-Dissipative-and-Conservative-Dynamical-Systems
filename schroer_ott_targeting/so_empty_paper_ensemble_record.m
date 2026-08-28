@@ -1,0 +1,32 @@
+function record = so_empty_paper_ensemble_record()
+%SO_EMPTY_PAPER_ENSEMBLE_RECORD Canonical row for one paper ensemble source.
+record.sourceIndex = NaN;
+record.sourceState = [NaN; NaN];
+record.sourceX = NaN;
+record.sourceY = NaN;
+record.found = false;
+record.terminationReason = "";
+record.legacyFailureCategory = "";
+record.runtimeBudgetSeconds = NaN;
+record.runtimeSeconds = NaN;
+record.iterations = NaN;
+record.controls = NaN;
+record.controlMagnitudes = zeros(1, 0);
+record.selectedRoute = zeros(1, 0);
+record.switchPoints = zeros(2, 0);
+record.finalState = [NaN; NaN];
+record.finalX = NaN;
+record.finalY = NaN;
+record.finalTargetDistance = NaN;
+record.seed = NaN;
+record.configurationFingerprint = "";
+record.maxAbsControl = NaN;
+record.totalAbsControl = NaN;
+record.maxIntersectionResidual = NaN;
+record.maxPathwiseReplayError = NaN;
+record.targetContained = false;
+record.minimumCertified = false;
+record.unresolvedSplits = NaN;
+record.errorIdentifier = "";
+record.errorMessage = "";
+end
